@@ -46,6 +46,7 @@ $KundeForkortelse = Read-Host "Angi forkortelsen til kunde (f.eks: mm eller nk)"
 $Workload = Read-Host "Angi ett kort navn for workload som opprettes (f.eks: sql eller visma)"
 $Region = Read-Host "Angi region der ressursgruppa skal opprettes (f.eks: norwayeast eller westeurope)"
 $EnvironementForkortelse = Read-Host "Angi miljø (prd, dev eller tst)"
+$Lopenummer = Read-Host "Angi løpenummer (01, 02, 03 osv.)"
 #Lister de mest brukte built-in rollene under, kopier ID inn i RBACRolle variabel
 #Contributor = b24988ac-6180-42a0-ab88-20f7382dd24c
 #Owner = 8e3af657-a8ff-443c-a75c-2fe8c4bcb635
@@ -58,7 +59,7 @@ $ResourceGroupForkortelse = "rg"
 #Prod (p) eller Test (t) miljø
 
 #Sammenstilling av variabler for navngivning
-$RGNavn = $KundeForkortelse + "-" + $ResourceGroupForkortelse + "-" + $Workload + "-" + $EnvironementForkortelse + "-" + $Region
+$RGNavn = $KundeForkortelse + "-" + $ResourceGroupForkortelse + "-" + $Workload + "-" + $EnvironementForkortelse + "-" + $Region + "-" + $Lopenummer
 $AADGrpNavnOwner = "biz-rbac-owner-" + $RGNavn
 $AADGrpNavnContributor = "biz-rbac-contributor-" + $RGNavn
 $AADGrpNavnReader = "biz-rbac-reader-" + $RGNavn
