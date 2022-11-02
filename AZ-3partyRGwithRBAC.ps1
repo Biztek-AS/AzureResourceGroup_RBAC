@@ -59,9 +59,9 @@ $ResourceGroupForkortelse = "rg"
 
 #Sammenstilling av variabler for navngivning
 $RGNavn = $KundeForkortelse + "-" + $ResourceGroupForkortelse + "-" + $Workload + "-" + $EnvironementForkortelse + "-" + $Region
-$AADGrpNavnOwner = "az-rbac-owner-" + $RGNavn
-$AADGrpNavnContributor = "az-rbac-contributor-" + $RGNavn
-$AADGrpNavnReader = "az-rbac-reader-" + $RGNavn
+$AADGrpNavnOwner = "biz-rbac-owner-" + $RGNavn
+$AADGrpNavnContributor = "biz-rbac-contributor-" + $RGNavn
+$AADGrpNavnReader = "biz-rbac-reader-" + $RGNavn
 
 Write-Host "Ressursgruppe navn blir da: $RGNavn" -ForegroundColor Green
 
