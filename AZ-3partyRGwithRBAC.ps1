@@ -45,6 +45,7 @@ function venteanimasjon {
 $KundeForkortelse = Read-Host "Angi forkortelsen til kunde (f.eks: mm eller nk)" 
 $Workload = Read-Host "Angi ett kort navn for workload som opprettes (f.eks: sql eller visma)"
 $Region = Read-Host "Angi region der ressursgruppa skal opprettes (f.eks: norwayeast eller westeurope)"
+$EnvironementForkortelse = Read-Host "Angi miljø (prd, dev eller tst)"
 #Lister de mest brukte built-in rollene under, kopier ID inn i RBACRolle variabel
 #Contributor = b24988ac-6180-42a0-ab88-20f7382dd24c
 #Owner = 8e3af657-a8ff-443c-a75c-2fe8c4bcb635
@@ -55,7 +56,7 @@ $RBACReader = 'acdd72a7-3385-48ef-bd42-f606fba81ae7'
 #Faste parametere
 $ResourceGroupForkortelse = "rg"
 #Prod (p) eller Test (t) miljø
-$EnvironementForkortelse = "prod"
+
 #Sammenstilling av variabler for navngivning
 $RGNavn = $KundeForkortelse + "-" + $ResourceGroupForkortelse + "-" + $Workload + "-" + $EnvironementForkortelse + "-" + $Region
 $AADGrpNavnOwner = "az-rbac-owner-" + $RGNavn
